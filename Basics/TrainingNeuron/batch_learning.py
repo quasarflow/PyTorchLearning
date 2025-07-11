@@ -33,4 +33,4 @@ model.eval()
 # Perform inference without tracking gradients
 with torch.no_grad():
     prediction = model(measurements)
-    print(prediction) # Should be close to 99.5
+    print(prediction)  # Should be close to 99.5
