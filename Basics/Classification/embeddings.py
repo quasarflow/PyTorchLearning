@@ -21,7 +21,9 @@ with torch.no_grad():
     bart_model.eval()
     print(out)
 
-    pred = bart_model(input_ids=out["input_ids"], attention_mask=out["attention_mask"]) # **out
+    pred = bart_model(
+        input_ids=out["input_ids"], attention_mask=out["attention_mask"]
+    )  # **out
     embeddings = pred.last_hidden_state.mean(dim=1)
     print(embeddings.shape)
     print(embeddings[0, :])

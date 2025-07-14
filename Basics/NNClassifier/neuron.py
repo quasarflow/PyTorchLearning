@@ -2,7 +2,9 @@ import torch
 from torch import nn
 import pandas as pd
 
-df = pd.read_csv("/home/jjk339/learn/learn-pytorch/Basics/NNClassifier/data/student_exam_data.csv")
+df = pd.read_csv(
+    "/home/jjk339/learn/learn-pytorch/Basics/NNClassifier/data/student_exam_data.csv"
+)
 
 # The input features are "Study Hours" and "Previous Exam Score"
 X = torch.tensor(df[["Study Hours", "Previous Exam Score"]].values, dtype=torch.float32)

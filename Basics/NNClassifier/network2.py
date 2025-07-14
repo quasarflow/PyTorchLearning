@@ -33,7 +33,7 @@ output_model.eval()
 with torch.no_grad():
     outputs = hidden_model(X)
     outputs = nn.functional.sigmoid(outputs)
-    outputs = output_model(outputs) 
+    outputs = output_model(outputs)
     y_pred = nn.functional.sigmoid(outputs) > 0.5
     y_pred_correct = y_pred.type(torch.float32) == y
     print(y_pred_correct.type(torch.float32).mean())
