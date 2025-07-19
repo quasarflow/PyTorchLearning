@@ -13,3 +13,7 @@ wheels/
 data/
 model/
 models/
+
+# PDF files and zone identifiers
+*.pdf
+*.pdfz
